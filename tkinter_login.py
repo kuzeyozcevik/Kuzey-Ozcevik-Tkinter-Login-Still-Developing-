@@ -1,5 +1,6 @@
 from tkinter import *
 root = Tk()
+root.title("Dashboard")
 frame1 = Frame(root)
 frame1.pack()
 dict = {}
@@ -38,9 +39,9 @@ def tab1():
                     print("You couldn't logged in, your password is wrong.")
             else:
                 print("You couldn't logged in, your username is wrong.")
-        button = Button(frame1,text="Log In",command=loginf)
+        button = Button(frame1,text="Log In",command=loginf,padx=7,pady=3)
         button.grid(row=2,column=1)
-        return_button = Button(frame1,text="Return",command=back)
+        return_button = Button(frame1,text="Return",command=back,padx=7,pady=3)
         return_button.grid(row=2,column=2)
     def tab3():
         global dict
@@ -69,16 +70,16 @@ def tab1():
             print(dict)
             username_enter.delete(0,END)
             password_enter.delete(0,END)
-        button = Button(frame1,text="Sign Up",command=signupf)
+        button = Button(frame1,text="Sign Up",command=signupf,padx=7,pady=3)
         button.grid(row=2,column=1)
-        return_button = Button(frame1,text="Return",command=back)
+        return_button = Button(frame1,text="Return",command=back,padx=7,pady=3)
         return_button.grid(row=2,column=2)
     welcome1 = Label(frame1,text="Welcome to Dashboard",font="Arial 14 bold")
     welcome1.grid(row=0,column=0,columnspan=3)
-    button1 = Button(frame1,text="Log In",command=tab2)
+    button1 = Button(frame1,text="Log In",command=tab2,padx=10,pady=5)
     button1.grid(row=1,column=0,columnspan=1)
 
-    button2 = Button(frame1,text="Sign In",command=tab3)
+    button2 = Button(frame1,text="Sign In",command=tab3,padx=10,pady=5)
     button2.grid(row=1,column=2,columnspan=1)
 tab1()
 root.mainloop()
